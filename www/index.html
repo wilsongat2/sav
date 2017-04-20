@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="media_button_bar/css/media_button_bar.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <meta charset="UTF-8">
+        <title>Blank App Designer Cordova Web App Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's ideal viewport.
+  * Note that Windows device viewports work better when initialized using the @viewport CSS rule.
+  * For a quick overview of "meta viewport" and @viewport, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see how it works, try your app on a real device with and without a "meta viewport" tag.
+  * Additional useful references include:
+  *   http://www.quirksmode.org/mobile/viewports.html
+  *   http://www.quirksmode.org/mobile/metaviewport/devices.html
+  *   https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Recommended location for your JavaScript libraries -->
+        <!-- These library references (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <!--
+  * cordova.js is a phantom lib for "Cordova HTML5 web app," it does nothing in a "Standard HTML5 web app"
+  * Seeing a "Failed to load resource: net::ERR_FILE_NOT_FOUND" message caused by this "cordova.js" script?
+  * The cordova.js script is required if you convert your "Standard HTML5" project into a "Cordova" project.
+  * You can safely ignore the error or comment out this line if you will not be developing a Cordova app.
+-->
+        <script src="cordova.js" id="xdkJScordova_"></script>
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+        <script type="application/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/bs_subpage.js"></script>
+    </head>
+
+    <body>
+        <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <div class="upage" id="mainpage">
+            <div class="upage-outer">
+                <div class="upage-content ac0 content-area vertical-col left" id="page_15_6">
+
+                    <div class="widget uib_w_11 scale-image d-margins" data-uib="media/img" data-ver="0">
+                        <figure class="figure-align">
+                            <img src="images/background2.png">
+
+                            <figcaption data-position="bottom"></figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="inner-element uib_w_1 uib_sidebar leftbar bar-bg thumb-bg bar-gutter" data-uib="layout/left_sidebar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'left', 'dur':200, 'io':true}">
+                    <div class="sidebar-content content-area vertical-col">
+
+                        <button class="btn widget uib_w_6 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1" id="bnt-visita"><i class="glyphicon glyphicon-user button-icon-left" data-position="left"></i> Visitação</button>
+                        <button class="btn widget uib_w_7 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-folder-open button-icon-left" data-position="left"></i>Agenda</button>
+                        <button class="btn widget uib_w_8 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-check button-icon-left" data-position="left"></i>CRM</button>
+
+                        <div class="widget uib_w_15 scale-image d-margins" data-uib="media/img" data-ver="0">
+                            <figure class="figure-align">
+                                <img src="images/500.png">
+                                <figcaption data-position="bottom"></figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="upage vertical-col left hidden" id="CRM">
+            <div class="btn-group uib-bs-flex widget uib_w_16 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                <button class="btn widget uib_w_17 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+
+            </div>
+            <div class="widget uib_w_12 scale-image d-margins" data-uib="media/img" data-ver="0">
+                <figure class="figure-align">
+                    <img src="images/crm.png">
+                    <figcaption data-position="bottom"></figcaption>
+                </figure>
+            </div>
+            <div class="tarea widget uib_w_13 d-margins" data-uib="media/text" data-ver="0" name="uib_w_13">
+                <div class="widget-container left-receptacle"></div>
+                <div class="widget-container right-receptacle"></div>
+                <div class="text-container">
+                    <p><strong>Comunhão</strong>
+                    </p>
+
+                    <p>A comunhão tem como objetivo ter os membros com o hábito de ter contato com Deus na primeira hora do dia, através do estudo da Bíblia, lição da Escola Sabatina, fazendo a jornada espiritual e orando.</p>
+
+                    <p>Uma pesquisa divulgada recentemente divulgou que o hábito de meditar altera as células do corpo. Já outra pesquisa aponta que as pessoas gostam da Bíblia porque ela “contém princípios / orientações sobre como ser uma boa pessoa”.</p>
+
+                    <p><strong>Relacionamento</strong>
+                    </p>
+
+                    <p>Ter cada membro envolvido em um pequeno grupo é a ferramenta para ter uma igreja mais acolhedora, atraindo interessados e também responsáveis pela manutenção deste membro na congregação. Pesquisas mostram a necessidade que os seres
+                        humanos têm de estar entre amigos, de ter encontros onde possam conversar e ter um vínculo de confiança.</p>
+
+                    <p><strong>Missão</strong>
+                    </p>
+
+                    <p>Ter cada membro levando pelo menos uma pessoa ao batismo dentro de um ano. Embora o número de membros no mundo tenha alcançado 18,1 milhões, quando se vê as estatísticas na casa dos 7 bilhões de habitantes no mundo, nota-se que há
+                        um campo imenso a ser trabalhado.</p>
+
+                    <p>As três palavras são, portanto, o resultado de uma vida de cristianismo, onde se procura ter o contato diário com Deus, ser amável e acolhedor, e pregar a volta de Jesus.</p>
+                </div>
+            </div>
+        </div>
+        <div class="upage hidden" id="Agenda">
+            <div id="Fevereiro" class="upage-content vertical-col left hidden">
+                <div class="btn-group uib-bs-flex widget uib_w_29 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_30 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+
+                </div>
+                <div class="widget uib_w_45 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/calendario.png">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+                <button class="btn widget uib_w_33 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Janeiro</button>
+                <button class="btn widget uib_w_34 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Fevereiro</button>
+                <button class="btn widget uib_w_35 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Março</button>
+                <button class="btn widget uib_w_36 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Abril</button>
+                <button class="btn widget uib_w_37 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Maio</button>
+                <button class="btn widget uib_w_38 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Junho</button>
+                <button class="btn widget uib_w_39 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Julho</button>
+                <button class="btn widget uib_w_40 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Agosto</button>
+                <button class="btn widget uib_w_41 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Setembro</button>
+                <button class="btn widget uib_w_43 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Outubro</button>
+                <button class="btn widget uib_w_42 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Novembro</button>
+                <button class="btn widget uib_w_44 d-margins btn-default" data-uib="twitter%20bootstrap/button" data-ver="1">Dezembro</button>
+            </div>
+            <div id="janeiro" class="upage-content vertical-col left hidden">
+                <div class="btn-group uib-bs-flex widget uib_w_47 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_48 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+                    <button class="btn widget uib_w_49 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-list-alt button-icon-left" data-position="left"></i>Calendário</button>
+
+                </div>
+                <div class="widget uib_w_46 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/janeiro.png">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="Feb2" class="upage-content vertical-col left hidden">
+                <div class="btn-group uib-bs-flex widget uib_w_52 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_53 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+                    <button class="btn widget uib_w_54 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-list-alt button-icon-left" data-position="left"></i>Calendário</button>
+
+                </div>
+                <div class="widget uib_w_51 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/fevereiro.png">
+
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="marco" class="upage-content vertical-col left hidden">
+                <div class="btn-group uib-bs-flex widget uib_w_55 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_56 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+                    <button class="btn widget uib_w_57 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-list-alt button-icon-left" data-position="left"></i>Calendário</button>
+                </div>
+
+                <div class="widget uib_w_103 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/marco.png">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="abril" class="upage-content vertical-col left hidden">
+                <div class="btn-group uib-bs-flex widget uib_w_59 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_60 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+                    <button class="btn widget uib_w_62 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-list-alt button-icon-left" data-position="left"></i>Calendário</button>
+                </div>
+                <div class="widget uib_w_63 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/abril.png">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="maio" class="upage-content vertical-col left hidden">
+                <div class="btn-group uib-bs-flex widget uib_w_64 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_65 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+                    <button class="btn widget uib_w_67 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-list-alt button-icon-left" data-position="left"></i>Calendário</button>
+                </div>
+                <div class="widget uib_w_68 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/maio.png">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="junho" class="upage-content vertical-col left hidden">
+                <div class="btn-group uib-bs-flex widget uib_w_69 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_70 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+                    <button class="btn widget uib_w_72 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-list-alt button-icon-left" data-position="left"></i>Calendário</button>
+                </div>
+                <div class="widget uib_w_73 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/junho.png">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="julho" class="upage-content vertical-col left hidden">
+                <div class="btn-group uib-bs-flex widget uib_w_74 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_75 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+                    <button class="btn widget uib_w_77 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-list-alt button-icon-left" data-position="left"></i>Calendário</button>
+                </div>
+                <div class="widget uib_w_78 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/julho.png">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="agosto" class="upage-content vertical-col left hidden">
+                <div class="btn-group uib-bs-flex widget uib_w_79 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_80 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+                    <button class="btn widget uib_w_82 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-list-alt button-icon-left" data-position="left"></i>Calendário</button>
+                </div>
+                <div class="widget uib_w_83 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/agosto.png">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="setembro" class="upage-content vertical-col left hidden">
+                <div class="btn-group uib-bs-flex widget uib_w_84 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_85 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+                    <button class="btn widget uib_w_87 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-list-alt button-icon-left" data-position="left"></i>Calendário</button>
+                </div>
+                <div class="widget uib_w_88 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/setembro.png">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="outubro" class="upage-content vertical-col left hidden">
+                <div class="btn-group uib-bs-flex widget uib_w_89 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_90 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+                    <button class="btn widget uib_w_92 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-list-alt button-icon-left" data-position="left"></i>Calendário</button>
+                </div>
+                <div class="widget uib_w_93 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/outubro.png">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="novembro" class="upage-content vertical-col left hidden">
+                <div class="btn-group uib-bs-flex widget uib_w_94 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_95 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+                    <button class="btn widget uib_w_97 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-list-alt button-icon-left" data-position="left"></i>Calendário</button>
+                </div>
+                <div class="widget uib_w_98 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/novembro.png">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+            </div>
+            <div id="dezembro" class="upage-content vertical-col left hidden">
+                <div class="btn-group uib-bs-flex widget uib_w_99 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                    <button class="btn widget uib_w_100 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+                    <button class="btn widget uib_w_101 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-list-alt button-icon-left" data-position="left"></i>Calendário</button>
+                </div>
+                <div class="widget uib_w_102 scale-image d-margins" data-uib="media/img" data-ver="0">
+                    <figure class="figure-align">
+                        <img src="images/dezembro.png">
+                        <figcaption data-position="bottom"></figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+
+        <div class="upage vertical-col left hidden" id="Cadastro">
+            <div class="btn-group uib-bs-flex widget uib_w_21 d-margins" data-uib="twitter%20bootstrap/button_group" data-ver="1">
+                <button class="btn widget uib_w_22 btn-primary" data-uib="twitter%20bootstrap/button" data-ver="1"><i class="glyphicon glyphicon-home button-icon-left" data-position="left"></i>Home</button>
+
+            </div>
+            <div class="widget uib_w_14 d-margins iframe-size" data-uib="media/iframe" data-ver="0">
+                <iframe src="http://sav.msma.org.br"></iframe>
+            </div>
+        </div>
+    </body>
+
+</html>
