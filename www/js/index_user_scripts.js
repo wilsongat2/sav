@@ -412,6 +412,36 @@
          return false;
     });
     
+        /* button  .uib_w_106 */
+    $(document).on("click", ".uib_w_106", function(evt)
+    {
+         /*global activate_page */
+         activate_page("#Cadastro"); 
+         return false;
+    });
+    
+        /* button  .uib_w_107 */
+    
+    
+        /* button  .uib_w_108 */
+    $(document).on("click", ".uib_w_108", function(evt)
+    {
+         /*global activate_page */
+         activate_page("#CRM"); 
+         return false;
+    });
+    
+        /* button  .uib_w_107 */
+    
+    
+        /* button  .uib_w_107 */
+    $(document).on("click", ".uib_w_107", function(evt)
+    {
+         /*global activate_subpage */
+         activate_subpage("#Fevereiro"); 
+         return false;
+    });
+    
     }
  document.addEventListener("app.Ready", register_event_handlers, false);
 })();
